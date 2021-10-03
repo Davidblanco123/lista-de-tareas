@@ -1,0 +1,27 @@
+{
+    "short_name": "Weather",
+    "name": "",
+    "icons": [
+        {
+            "src": "/images/tareas.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#00897b",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#00897b",
+    "shortcuts": [
+        {
+            "name": "lista de tareas",
+            "short_name": "lista",
+            "description": "esta es una app que se creo con firebase",
+            "url": "/index.html",
+            "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+        }
+    ],
+    "description": "Weather forecast information"
+      
+}

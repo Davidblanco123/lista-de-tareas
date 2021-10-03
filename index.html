@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lista de tareas</title>
+
+        <!-- Compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <label for="txtTitulo">Título</label>
+            <input type="text" id="txtTitulo" name="txtTitulo" />
+
+            <label for="txtDetalles">Detalles</label>
+            <input type="text" id="txtDetalles" name="txtDetalles" />
+
+            <!-- AQUI ESTA EL BOTON -->
+            <a class="waves-effect waves-light btn" id = "btnAgregar" onclick="agregarTarea()"
+                >AGREGAR</a
+            >
+            <a class="waves-effect waves-light btn" id = "btnActualizar" onclick="actualizarTarea()"style = "display: none"
+            >ACTUALIZAR</a
+        >
+            <a class="waves-effect waves-light btn" id = "btnCancelar" onclick="limpiarBotones()" style = "display: none"
+                >CANCELAR</a
+            >
+        </div>
+
+        <div class="container">
+            <ul class="collapsible" id="lista"></ul>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+        <script>
+           // Your web app's Firebase configuration
+           const firebaseConfig = {
+    apiKey: "AIzaSyD16TJ1-l-UPxmBKM3kPKZIlZX2EQ8fHsk",
+    authDomain: "lista-de-tareas-d9da9.firebaseapp.com",
+    projectId: "lista-de-tareas-d9da9",
+    storageBucket: "lista-de-tareas-d9da9.appspot.com",
+    messagingSenderId: "391062809924",
+    appId: "1:391062809924:web:0c1204a2614ed5ee2bbb11",
+    measurementId: "G-78KZ7E47B7"
+  };
+          
+            // Initialize Firebase
+             firebase.initializeApp(firebaseConfig);
+          </script>
+        <script src="tareas.js"></script>
+    </body>
+</html>
